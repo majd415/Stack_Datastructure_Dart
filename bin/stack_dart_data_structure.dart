@@ -7,7 +7,7 @@ class Stack<T> {
   late List<T> item=[];
 
   Stack() : top = -1 {
-    item.length=500;
+    item.length=MAX_SIZE;
   }
 
   void push(T element) {
@@ -37,6 +37,8 @@ class Stack<T> {
     } else {
       element = item[top];
       top--;
+      stdout.writeln(element);
+
     }
   }
 
